@@ -43,6 +43,7 @@ class Interface
       player_hand.cards.length.times do |count|
         print count.positive? ? ' + **' : '**'
       end
+      puts
     end
   end
 
