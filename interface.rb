@@ -104,8 +104,6 @@ class Interface
   end
 
   def print_separator(mark = '-', length = 40)
-    length.times do
-      puts mark
-    end
+    puts mark * length
   end
 end
