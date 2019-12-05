@@ -22,6 +22,7 @@ class Hand
     value = 0
 
     @cards.each do |card|
+      
       value += card.value unless card.value.is_a?(Array)
     end
 

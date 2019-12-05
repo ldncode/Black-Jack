@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'hand'
+
 class Player
   attr_reader :name, :bank, :hand
 

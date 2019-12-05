@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'card'
+
 class Deck
   attr_reader :cards
 
@@ -21,11 +23,11 @@ class Deck
   def generate_cards
     Card::SUITS.each do |suit|
       Card::NUMBERS.each do |rank|
-        @cards << Card.new(rank, suit, rank)
+        @cards << Card.new(suit, rank, rank)
       end
       Card::PICTURES.each do |rank|
         value = rank == 'A' ? [1, 11] : 10
-        cards << Card.new(rank, suit, value)
+        cards << Card.new(suit, value, rank)
       end
     end
     @cards.shuffle

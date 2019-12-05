@@ -8,11 +8,11 @@ class Interface
   ].freeze
 
   def start_game
-    puts 'Добро пожаловать в игру Блэк Джек'
+    puts 'Добро пожаловать в Блэк Джек'
   end
 
   def user_name
-    puts 'Введите имя'
+    puts 'Введите имя '
     gets.chomp
   end
 
@@ -54,7 +54,7 @@ class Interface
     print_separator
 
     if winner.nil?
-      puts 'Ничья, победила дружба'
+      puts 'Ничья'
     else
       puts "Победил игрок - #{winner.name}"
     end
@@ -78,7 +78,7 @@ class Interface
   end
 
   def select_answer
-    print 'Выбери действие'
+    print 'Выбери действие '
     gets.to_i
   end
 
@@ -95,7 +95,7 @@ class Interface
   def restart_game?
     loop do
       print_separator
-      print 'Хочешь поиграть еще? One more game? (Y/n): '
+      print 'Хочешь поиграть еще? One more game? (Да/Нет): '
       answer = gets.chomp
 
       return true if ['', 'Да', 'да'].include?(answer)
